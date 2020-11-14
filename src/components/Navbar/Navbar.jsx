@@ -9,10 +9,10 @@ import Paper from "@material-ui/core/Paper";
 
 const Navbar = (props) => {
   return (
-      <Container maxWidth="lg" style={{ backgroundColor: '#cfe8fc'}}>
-      <Grid container spacing={3} >
-        <Grid item sm={9} className={s.center}>
-          {/*<Paper>*/}
+      <Container maxWidth="lg" style={{backgroundColor: '#cfe8fc'}}>
+        <Grid container spacing={3}>
+          <Grid item sm={9} className={s.center}>
+            {/*<Paper>*/}
             <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
               <Button>
                 <NavLink to='/' className={s.item}>Main</NavLink>
@@ -27,19 +27,24 @@ const Navbar = (props) => {
                 <NavLink to='/weather' className={s.item}>Weather</NavLink>
               </Button>
             </ButtonGroup>
-          {/*</Paper>*/}
-        </Grid>
-        <Grid sm={3} className={s.right}>
-          {/*<Paper>*/}
-            <ButtonGroup className={s.loginBtn} variant="contained" color="primary" aria-label="contained primary button group">
-              <Button>
-                <NavLink to='/login' className={s.item}>Login</NavLink>
-              </Button>
+            {/*</Paper>*/}
+          </Grid>
+          <Grid sm={3} className={s.right}>
+            {/*<Paper>*/}
+            <ButtonGroup className={s.loginBtn} variant="contained" color="primary"
+                         aria-label="contained primary button group">
+
+              {props.isAuth
+                  // <div>{props.login}
+                  ? <Button onClick={props.logout}>Log out</Button>
+                  : <Button><NavLink to={'/login'}>Login</NavLink></Button>
+              }
+
             </ButtonGroup>
-          {/*</Paper>*/}
+            {/*</Paper>*/}
+          </Grid>
         </Grid>
-      </Grid>
-        </Container>
+      </Container>
   )
 };
 

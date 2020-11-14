@@ -13,12 +13,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Grid from "@material-ui/core/Grid";
 import s from "./components/Navbar/Navbar.module.css";
 import Container from "@material-ui/core/Container";
+import NavbarContainer from "./components/Navbar/NavbarContainer";
 
-function App() {
+function App(props) {
   return (
       <div>
-        <BrowserRouter>
-          <Navbar/>
+        {/*<BrowserRouter>*/}
+          <NavbarContainer store={props.store}/>
           <Container maxWidth="lg" style={{ backgroundColor: '#cfe8fc'}}>
             <Grid container spacing={3} >
               <Grid item sm={12}>
@@ -31,14 +32,14 @@ function App() {
 
             <Route path='/weather' render={() => <Weather/>}/>
 
-            <Route path='/login' render={() => <Login/>}/>
+            <Route path='/login' render={() => <Login store={props.store} />}/>
 
             {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
           </Switch>
                 </Grid>
                 </Grid>
           </Container>
-        </BrowserRouter>
+        {/*</BrowserRouter>*/}
       </div>
   )
 }
