@@ -37,7 +37,7 @@ const Navbar = (props) => {
               {props.isAuth
                   // <div>{props.login}
                   ? <Button onClick={props.logout}>Log out</Button>
-                  : <Button><NavLink to={'/login'}>Login</NavLink></Button>
+                  : <Button><NavLink className={s.item} to={'/login'}>Login</NavLink></Button>
               }
 
             </ButtonGroup>

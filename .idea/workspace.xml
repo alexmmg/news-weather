@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1959e5af-7f50-4803-b677-6074540d2190" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/CheckboxGroup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/FormikControl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/RadioButtons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/Select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/TextError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/Formik/Textarea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/data/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login/Login.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/dialogsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/sidebarReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/News/ArticleItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/News/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/News.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Weather/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/Weather.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +35,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../devloop/beintouch-front-feature-LOGIN" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../busy-pinguin-react/my-app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -59,7 +47,10 @@
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -74,6 +65,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.App.js" />
       </list>
     </recent_temporary>
   </component>
@@ -86,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605212426500</updated>
       <workItem from="1605212427562" duration="1152000" />
-      <workItem from="1605213741060" duration="25836000" />
+      <workItem from="1605213741060" duration="38389000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605214094970</created>
@@ -109,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605295302267</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="login/logout done">
+      <created>1605384440688</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605384440688</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +117,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="Navbar and routing done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar and routing done" />
+    <MESSAGE value="login/logout done" />
+    <option name="LAST_COMMIT_MESSAGE" value="login/logout done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605213693462">
@@ -129,37 +129,85 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="452" y="146" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1294.741@72.27.1294.741" timestamp="1605364934337" />
-    <state x="216" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1605295302086">
+    <state x="216" y="27" width="912" height="741" key="CommitChangelistDialog2" timestamp="1605384440470">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="216" y="27" width="912" height="741" key="CommitChangelistDialog2/72.27.1294.741@72.27.1294.741" timestamp="1605295302086" />
+    <state x="216" y="27" width="912" height="741" key="CommitChangelistDialog2/72.27.1294.741@72.27.1294.741" timestamp="1605384440470" />
     <state x="172" y="127" width="1094" height="541" key="DiffContextDialog" timestamp="1605292154979">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="172" y="127" width="1094" height="541" key="DiffContextDialog/72.27.1294.741@72.27.1294.741" timestamp="1605292154979" />
-    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605381516536">
+    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605387452535">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1605381516536" />
-    <state width="1271" height="163" key="GridCell.Tab.0.bottom" timestamp="1605384400916">
+    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1605387452535" />
+    <state width="1271" height="204" key="GridCell.Tab.0.bottom" timestamp="1605444524418">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="163" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605384400916" />
-    <state width="1271" height="163" key="GridCell.Tab.0.center" timestamp="1605384400914">
+    <state width="1271" height="204" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605444524418" />
+    <state width="1271" height="204" key="GridCell.Tab.0.center" timestamp="1605444524418">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="163" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605384400914" />
-    <state width="1271" height="163" key="GridCell.Tab.0.left" timestamp="1605384400913">
+    <state width="1271" height="204" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1605444524418" />
+    <state width="1271" height="204" key="GridCell.Tab.0.left" timestamp="1605444524417">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="163" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605384400913" />
-    <state width="1271" height="163" key="GridCell.Tab.0.right" timestamp="1605384400915">
+    <state width="1271" height="204" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1605444524417" />
+    <state width="1271" height="204" key="GridCell.Tab.0.right" timestamp="1605444524418">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1271" height="163" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605384400915" />
-    <state x="427" y="134" width="616" height="554" key="find.popup" timestamp="1605378513343">
+    <state width="1271" height="204" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1605444524418" />
+    <state width="1271" height="204" key="GridCell.Tab.1.bottom" timestamp="1605444524419">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="427" y="134" width="616" height="554" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1605378513343" />
+    <state width="1271" height="204" key="GridCell.Tab.1.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605444524419" />
+    <state width="1271" height="204" key="GridCell.Tab.1.center" timestamp="1605444524419">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.1.center/72.27.1294.741@72.27.1294.741" timestamp="1605444524419" />
+    <state width="1271" height="204" key="GridCell.Tab.1.left" timestamp="1605444524418">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.1.left/72.27.1294.741@72.27.1294.741" timestamp="1605444524418" />
+    <state width="1271" height="204" key="GridCell.Tab.1.right" timestamp="1605444524419">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.1.right/72.27.1294.741@72.27.1294.741" timestamp="1605444524419" />
+    <state width="1271" height="204" key="GridCell.Tab.2.bottom" timestamp="1605444524420">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.2.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605444524420" />
+    <state width="1271" height="204" key="GridCell.Tab.2.center" timestamp="1605444524420">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.2.center/72.27.1294.741@72.27.1294.741" timestamp="1605444524420" />
+    <state width="1271" height="204" key="GridCell.Tab.2.left" timestamp="1605444524419">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.2.left/72.27.1294.741@72.27.1294.741" timestamp="1605444524419" />
+    <state width="1271" height="204" key="GridCell.Tab.2.right" timestamp="1605444524420">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.2.right/72.27.1294.741@72.27.1294.741" timestamp="1605444524420" />
+    <state width="1271" height="204" key="GridCell.Tab.3.bottom" timestamp="1605444524421">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.3.bottom/72.27.1294.741@72.27.1294.741" timestamp="1605444524421" />
+    <state width="1271" height="204" key="GridCell.Tab.3.center" timestamp="1605444524421">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.3.center/72.27.1294.741@72.27.1294.741" timestamp="1605444524421" />
+    <state width="1271" height="204" key="GridCell.Tab.3.left" timestamp="1605444524421">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.3.left/72.27.1294.741@72.27.1294.741" timestamp="1605444524421" />
+    <state width="1271" height="204" key="GridCell.Tab.3.right" timestamp="1605444524421">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1271" height="204" key="GridCell.Tab.3.right/72.27.1294.741@72.27.1294.741" timestamp="1605444524421" />
+    <state x="427" y="134" width="616" height="554" key="find.popup" timestamp="1605388329182">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="427" y="134" width="616" height="554" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1605388329182" />
   </component>
 </project>

@@ -3,7 +3,7 @@ import {Redirect} from "react-router-dom";
 
 const Profile = () => {
 
-  if (!localStorage.jwt) {
+  if (localStorage.jwt === "false") {
     return <Redirect to={"/login"} />
   }
 

@@ -51,8 +51,8 @@ export const login = (email, password) => async (dispatch) => {
 export const logout = (email, password) => async (dispatch) => {
     let response = await authAPI.logout(email, password);
     if (response === "LOGGED OUT") {
-        localStorage.removeItem("jwt");
         dispatch(setAuthUserData(null, null, null));
+        localStorage.setItem("jwt", "false");
     }
 };
 

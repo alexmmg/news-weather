@@ -17,30 +17,30 @@ import NavbarContainer from "./components/Navbar/NavbarContainer";
 
 function App(props) {
   return (
-      <div>
+      <>
         {/*<BrowserRouter>*/}
-          <NavbarContainer store={props.store}/>
-          <Container maxWidth="lg" style={{ backgroundColor: '#cfe8fc'}}>
-            <Grid container spacing={3} >
-              <Grid item sm={12}>
-          <Switch>
-            <Route exact path='/' render={() => <Main/>}/>
+        <NavbarContainer store={props.store}/>
+        <Container maxWidth="lg" style={{backgroundColor: '#cfe8fc'}}>
+          <Grid container spacing={3}>
+            <Grid item sm={12}>
+              <Switch>
+                <Route exact path='/' render={() => <Main/>}/>
 
-            <Route path='/news' render={() => <News/>}/>
+                <Route path='/news' render={() => <News/>}/>
 
-            <Route path='/profile' render={() => <Profile/>}/>
+                <Route path='/profile' render={() => <Profile/>}/>
 
-            <Route path='/weather' render={() => <Weather/>}/>
+                <Route path='/weather' render={() => <Weather store={props.store}/>}/>
 
-            <Route path='/login' render={() => <Login store={props.store} />}/>
+                <Route path='/login' render={() => <Login store={props.store}/>}/>
 
-            {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
-          </Switch>
-                </Grid>
-                </Grid>
-          </Container>
+                {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
+              </Switch>
+            </Grid>
+          </Grid>
+        </Container>
         {/*</BrowserRouter>*/}
-      </div>
+      </>
   )
 }
 
