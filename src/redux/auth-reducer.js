@@ -5,7 +5,7 @@ const SET_USER_DATA = 'auth/SET_USER_DATA';
 let initialState = {
     // id: null,
     email: null,
-    login: null,
+    password: null,
     // isFetching: false,
     isAuth: false,
 
@@ -25,25 +25,25 @@ const authReducer = (state = initialState, action) => {
 };
 
 
-export const setAuthUserData = (email, login, isAuth) => ({
+export const setAuthUserData = (email, password, isAuth) => ({
     type: SET_USER_DATA,
-    payload: {email, login, isAuth}
+    payload: {email, password, isAuth}
 });
 
 
-export const getMyAccount = () => async (dispatch) => {
-    let response = await authAPI.getMyAccount();
-    if (response.credentials) {
-        let {email, login} = response.credentials;
-        dispatch(setAuthUserData(email, login, true));
-    }
-};
+// export const getMyAccount = () => async (dispatch) => {
+//     let response = await authAPI.getMyAccount();
+//     if (response.credentials) {
+//         let {email, login} = response.credentials;
+//         dispatch(setAuthUserData(email, login, true));
+//     }
+// };
 
 export const login = (email, password) => async (dispatch) => {
     let response = await authAPI.login(email, password);
     if (response === "OK") {
         localStorage.setItem("jwt", "true");
-        dispatch(setAuthUserData(email, login, true));
+        dispatch(setAuthUserData(email, password, true));
     }
 };
 
@@ -51,7 +51,7 @@ export const login = (email, password) => async (dispatch) => {
 export const logout = (email, password) => async (dispatch) => {
     let response = await authAPI.logout(email, password);
     if (response === "LOGGED OUT") {
-        dispatch(setAuthUserData(null, null, null));
+        dispatch(setAuthUserData(null, null, false));
         localStorage.setItem("jwt", "false");
     }
 };

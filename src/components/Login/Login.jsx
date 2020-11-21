@@ -1,7 +1,5 @@
 import React from 'react'
 import {Formik, Form, Field} from 'formik'
-import * as Yup from 'yup'
-import FormikControl from '../../assets/Formik/FormikControl'
 import {Redirect} from "react-router-dom";
 import {login} from "../../redux/auth-reducer";
 import connect from "react-redux/lib/connect/connect";
@@ -12,7 +10,6 @@ import {TextField} from 'formik-material-ui';
 const Login = (props) => {
 
   if (props.isAuth) {
-    debugger
     return <Redirect to={"/profile"}/>
   }
 

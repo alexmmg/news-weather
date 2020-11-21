@@ -26,8 +26,8 @@ export const authAPI = {
   }
 };
 
-// export const newsAPI = {
-//   getNews() {
+// export const weatherAPI = {
+//   getWeather() {
 //     return axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsApiKey}`);
 //   }
 // };
