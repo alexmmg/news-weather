@@ -1,5 +1,6 @@
 const SET_WEATHER_DATA = 'weather/SET_WEATHER_DATA';
 const SET_CITY_WEATHER_DATA = 'weather/SET_CITY_WEATHER_DATA';
+const DELETE_CITY_WEATHER_DATA = 'weather/DELETE_CITY_WEATHER_DATA';
 
 let initialState = {
     main: {
@@ -21,14 +22,21 @@ const weatherReducer = (state = initialState, action) => {
             };
         }
         case SET_CITY_WEATHER_DATA: {
-            let searchHistory = [...state.searchHistory];
+            const searchHistory = [...state.searchHistory];
             searchHistory.push(action.payload.cityWeather);
             return {
                 ...state,
                 searchHistory
             };
         }
-
+        case DELETE_CITY_WEATHER_DATA: {
+            const searchHistory = [...state.searchHistory];
+            searchHistory.splice(action.index, 1);
+            return {
+                ...state,
+                searchHistory
+            };
+        }
         default:
             return state;
     }
@@ -43,6 +51,11 @@ export const setWeatherData = (main, name) => ({
 export const setCityWeatherData = (cityWeather) => ({
     type: SET_CITY_WEATHER_DATA,
     payload: {cityWeather}
+});
+
+export const deleteCityWeatherData = (index) => ({
+    type: DELETE_CITY_WEATHER_DATA,
+    payload: {index}
 });
 
 

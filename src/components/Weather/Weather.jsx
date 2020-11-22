@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
 import useLocation from "../../assets/hooks/useLocation";
-import * as axios from "axios";
+import React, {useEffect, useState} from 'react';
+import LocalWeather from "./LocalWeather";
+import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {Redirect} from "react-router-dom";
 import {setCityWeatherData} from "../../redux/weather-reducer";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import LocalWeather from "./LocalWeather";
 import Grid from "@material-ui/core/Grid";
 import CityWeather from "./CityWeather";
 
@@ -21,6 +21,7 @@ const Weather = (props) => {
     const [city, setCity] = useState("")
     const [cityOnButtonClick, setCityOnButtonClick] = useState("")
 
+
     useEffect(() => {
         let cityWeather = async () => {
             try {
@@ -28,7 +29,7 @@ const Weather = (props) => {
 
                 const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityOnButtonClick}&appid=${apikey}&units=metric`)
                 dispatch(setCityWeatherData(response.data))
-                console.log(response)
+                console.log(response.data)
             } catch (e) {
             }
         }
@@ -58,11 +59,14 @@ const Weather = (props) => {
                 </form>
 
                 <div>
-                    {weatherHistory.map((el, index) => (
-                        <CityWeather city={el.name} humidity = {el.main.humidity} pressure = {el.main.pressure} temp = {el.main.temp} key={index}/>))}
+                    {
+                        weatherHistory.map((el, index) => (
+                            <CityWeather city={el.name} humidity={el.main.humidity} pressure={el.main.pressure}
+                                         temp={el.main.temp} key={index} index={index} />))
+                    }
                 </div>
 
-                </Grid>
+            </Grid>
             <Grid container item xs={4} spacing={3}>
                 <LocalWeather/>
             </Grid>

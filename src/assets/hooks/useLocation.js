@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import * as axios from "axios";
 import {setWeatherData} from "../../redux/weather-reducer";
 
-const useLocation = (options = {}) => {
+const useLocation = () => {
   const [location, setLocation] = useState({});
   const [error, setError] = useState();
+
+  const options = {enableHighAccuracy: false, timeout: 8000, maximumAge: 850000};
 
   const handleSuccess = (position) => {
     const { latitude, longitude } = position.coords;
@@ -14,6 +16,8 @@ const useLocation = (options = {}) => {
       longitude,
     });
   };
+
+  console.log(location);
 
   const handleError = (error) => {
     setError(error.message);
@@ -27,7 +31,7 @@ const useLocation = (options = {}) => {
     }
 
     navigator.geolocation.getCurrentPosition(handleSuccess, handleError, options);
-  }, [options]);
+  }, []);
 
   return { location, error };
 };

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import useLocation from "../../assets/hooks/useLocation";
-import axios from "axios";
+import axios from 'axios';
 import {useDispatch, useSelector} from "react-redux";
 import {Redirect} from "react-router-dom";
 import {setLocalError, setWeatherData} from "../../redux/weather-reducer";
@@ -21,12 +21,11 @@ const LocalWeather = (props) => {
                 const lat = location.latitude;
                 const lngt = location.longitude;
 
-                const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lngt}&appid=${apikey}&units=metric`)
+                const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lngt}&appid=${apikey}`)
                 dispatch(setWeatherData(response.data.main, response.data.name))
-                // console.log(response)
             } catch (err) {
                 // setApiError({error: err.message});
-                // console.log(err.message);
+                console.log(err.message);
             }
         }
 
