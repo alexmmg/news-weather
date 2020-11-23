@@ -29,7 +29,6 @@ const Weather = (props) => {
 
                 const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityOnButtonClick}&appid=${apikey}&units=metric`)
                 dispatch(setCityWeatherData(response.data))
-                console.log(response.data)
             } catch (e) {
             }
         }
@@ -45,6 +44,7 @@ const Weather = (props) => {
     const handleClick = (e) => {
         e.preventDefault()
         setCityOnButtonClick(city)
+        setCity('')
     }
 
     console.log(weatherHistory);
@@ -61,8 +61,9 @@ const Weather = (props) => {
                 <div>
                     {
                         weatherHistory.map((el, index) => (
-                            <CityWeather city={el.name} humidity={el.main.humidity} pressure={el.main.pressure}
-                                         temp={el.main.temp} key={index} index={index} />))
+                            <CityWeather city={el.name} country={el.sys.country} humidity={el.main.humidity} pressure={el.main.pressure}
+                                         temp={el.main.temp} key={el.id} i={index} />)
+                        )
                     }
                 </div>
 

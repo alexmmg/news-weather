@@ -17,8 +17,6 @@ const useLocation = () => {
     });
   };
 
-  console.log(location);
-
   const handleError = (error) => {
     setError(error.message);
   };

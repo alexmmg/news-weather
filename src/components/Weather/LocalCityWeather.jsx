@@ -12,7 +12,8 @@ import CardActions from "@material-ui/core/CardActions";
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
-        marginTop: 25
+        marginTop: 25,
+        marginBottom: 25
     },
     bullet: {
         display: 'inline-block',
@@ -28,21 +29,15 @@ const useStyles = makeStyles({
 });
 
 
-const CityWeather = ({city, humidity, pressure, temp, i, country}) => {
-    const dispatch = useDispatch();
-
-    // const handleClick = (i) => {
-    //     dispatch(deleteCityWeatherData(i))
-    // }
+const CityWeather = ({city, humidity, pressure, temp}) => {
 
     const classes = useStyles();
-
 
     return (
         <Card className={classes.root}>
             <CardContent>
                 <Typography variant="h5" component="h2">
-                    {city},  {country}
+                    {city}
                 </Typography>
                 <Typography className={classes.pos} color="textSecondary">
                     Temp: {temp} С°
@@ -53,11 +48,6 @@ const CityWeather = ({city, humidity, pressure, temp, i, country}) => {
                     Pressure: {pressure} hPA
                 </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small" onClick={
-                    () => dispatch(deleteCityWeatherData(i))
-                }>close</Button>
-            </CardActions>
         </Card>
     );
 };
