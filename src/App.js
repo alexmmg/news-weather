@@ -1,47 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
 import Main from "./components/Main/Main";
-import {Redirect, BrowserRouter, Switch, Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import React from "react";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
 import Login from "./components/Login/Login";
 import News from "./components/News/News";
 import Profile from "./components/Profile/Profile";
 import Weather from "./components/Weather/Weather";
-import Navbar from "./components/Navbar/Navbar";
 import Grid from "@material-ui/core/Grid";
-import s from "./components/Navbar/Navbar.module.css";
 import Container from "@material-ui/core/Container";
 import NavbarContainer from "./components/Navbar/NavbarContainer";
+import * as palette from "@material-ui/core/colors";
+import {makeStyles} from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+    root: {
+        backgroundColor: palette.grey["100"],
+        minHeight: "92vh"
+    }
+});
 
 function App(props) {
-  return (
-      <>
-        {/*<BrowserRouter>*/}
-        <NavbarContainer store={props.store}/>
-        <Container maxWidth="lg" style={{backgroundColor: '#cfe8fc'}}>
-          <Grid container spacing={3}>
-            <Grid item sm={12}>
-              <Switch>
-                <Route exact path='/' render={() => <Main/>}/>
 
-                <Route path='/news' render={() => <News/>}/>
+    const classes = useStyles();
 
-                <Route path='/profile' render={() => <Profile/>}/>
+    return (
+        <>
+            <NavbarContainer store={props.store}/>
+            <div className={classes.root}>
+                <Container maxWidth="lg">
+                    <Grid container spacing={3}>
+                        <Grid item sm={12}>
+                            <Switch>
+                                <Route exact path='/' render={() => <Main/>}/>
 
-                <Route path='/weather' render={() => <Weather store={props.store}/>}/>
+                                <Route path='/news' render={() => <News/>}/>
 
-                <Route path='/login' render={() => <Login store={props.store}/>}/>
+                                <Route path='/profile' render={() => <Profile/>}/>
 
-                {/*<Route path='*' render={() => <div>404 NOT FOUND</div>}/>*/}
-              </Switch>
-            </Grid>
-          </Grid>
-        </Container>
-        {/*</BrowserRouter>*/}
-      </>
-  )
+                                <Route path='/weather' render={() => <Weather store={props.store}/>}/>
+
+                                <Route path='/login' render={() => <Login store={props.store}/>}/>
+
+                            </Switch>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
+        </>
+    )
 }
 
 export default App;

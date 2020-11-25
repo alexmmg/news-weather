@@ -1,19 +1,16 @@
 import React from 'react';
-import {Button} from "@material-ui/core";
-import {deleteCityWeatherData} from "../../redux/weather-reducer";
-import {useDispatch, useSelector} from "react-redux";
 import {makeStyles} from '@material-ui/core/styles';
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
 
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 275,
+        maxWidth: 350,
         marginTop: 25,
-        marginBottom: 25
+        marginBottom: 25,
+        backgroundColor: '#cfe8fc'
     },
     bullet: {
         display: 'inline-block',

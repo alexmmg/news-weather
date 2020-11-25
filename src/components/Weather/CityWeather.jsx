@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from "@material-ui/core";
 import {deleteCityWeatherData} from "../../redux/weather-reducer";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {makeStyles} from '@material-ui/core/styles';
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
@@ -11,8 +11,9 @@ import CardActions from "@material-ui/core/CardActions";
 
 const useStyles = makeStyles({
     root: {
-        minWidth: 275,
-        marginTop: 25
+        maxWidth: 350,
+        marginTop: 25,
+        marginBottom: 25
     },
     bullet: {
         display: 'inline-block',
@@ -30,19 +31,13 @@ const useStyles = makeStyles({
 
 const CityWeather = ({city, humidity, pressure, temp, i, country}) => {
     const dispatch = useDispatch();
-
-    // const handleClick = (i) => {
-    //     dispatch(deleteCityWeatherData(i))
-    // }
-
     const classes = useStyles();
-
 
     return (
         <Card className={classes.root}>
             <CardContent>
                 <Typography variant="h5" component="h2">
-                    {city},  {country}
+                    {city}, {country}
                 </Typography>
                 <Typography className={classes.pos} color="textSecondary">
                     Temp: {temp} С°
@@ -54,9 +49,11 @@ const CityWeather = ({city, humidity, pressure, temp, i, country}) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" onClick={
-                    () => dispatch(deleteCityWeatherData(i))
-                }>close</Button>
+                <Button size="small"
+                        onClick={() => dispatch(deleteCityWeatherData(i))}
+                        color="secondary">
+                    close
+                </Button>
             </CardActions>
         </Card>
     );

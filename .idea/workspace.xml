@@ -16,13 +16,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1959e5af-7f50-4803-b677-6074540d2190" name="Default Changelist" comment="starting Weather">
-      <change afterPath="$PROJECT_DIR$/src/components/Weather/LocalCityWeather.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/hooks/useLocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/hooks/useLocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/News/ArticleItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/ArticleItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/News/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/News.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Weather/CityWeather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/CityWeather.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Weather/LocalCityWeather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/LocalCityWeather.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Weather/LocalWeather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/LocalWeather.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Weather/Weather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/Weather.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/weather-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/weather-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +58,11 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Weather" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="$USER_HOME$/.yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -128,7 +139,9 @@
       <workItem from="1606111498052" duration="1272000" />
       <workItem from="1606130370470" duration="1076000" />
       <workItem from="1606156519206" duration="3227000" />
-      <workItem from="1606163751806" duration="6099000" />
+      <workItem from="1606163751806" duration="11985000" />
+      <workItem from="1606244743372" duration="7537000" />
+      <workItem from="1606279658724" duration="3743000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605214094970</created>
@@ -179,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606058319928</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="weather done">
+      <created>1606170286528</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606170286528</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,9 +223,6 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="Navbar and routing done" />
@@ -213,7 +230,8 @@
     <MESSAGE value="starting Weather" />
     <MESSAGE value="weather in progress" />
     <MESSAGE value="weather logic finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="weather logic finished" />
+    <MESSAGE value="weather done" />
+    <option name="LAST_COMMIT_MESSAGE" value="weather done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606050481409">
@@ -236,26 +254,26 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="172" y="127" width="1094" height="541" key="DiffContextDialog/72.27.1294.741@72.27.1294.741" timestamp="1605292154979" />
-    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606165263958">
+    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606245079078">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1606165263958" />
-    <state width="1269" height="170" key="GridCell.Tab.0.bottom" timestamp="1606169776041">
+    <state x="445" y="152" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1606245079078" />
+    <state width="1269" height="170" key="GridCell.Tab.0.bottom" timestamp="1606280176391">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1269" height="170" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1606169776041" />
-    <state width="1269" height="170" key="GridCell.Tab.0.center" timestamp="1606169776040">
+    <state width="1269" height="170" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1606280176391" />
+    <state width="1269" height="170" key="GridCell.Tab.0.center" timestamp="1606280176390">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1269" height="170" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1606169776040" />
-    <state width="1269" height="170" key="GridCell.Tab.0.left" timestamp="1606169776039">
+    <state width="1269" height="170" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1606280176390" />
+    <state width="1269" height="170" key="GridCell.Tab.0.left" timestamp="1606280176389">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1269" height="170" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1606169776039" />
-    <state width="1269" height="170" key="GridCell.Tab.0.right" timestamp="1606169776040">
+    <state width="1269" height="170" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1606280176389" />
+    <state width="1269" height="170" key="GridCell.Tab.0.right" timestamp="1606280176391">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1269" height="170" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1606169776040" />
+    <state width="1269" height="170" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1606280176391" />
     <state width="1271" height="204" key="GridCell.Tab.1.bottom" timestamp="1605444524419">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -316,10 +334,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="476" y="27" width="475" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741@72.27.1294.741" timestamp="1606052559106" />
-    <state x="356" y="140" width="616" height="554" key="find.popup" timestamp="1606058718748">
+    <state x="356" y="140" width="616" height="554" key="find.popup" timestamp="1606252414902">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="356" y="140" width="616" height="554" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1606058718748" />
+    <state x="356" y="140" width="616" height="554" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1606252414902" />
     <state x="383" y="174" key="run.anything.popup" timestamp="1606130392693">
       <screen x="72" y="27" width="1294" height="741" />
     </state>

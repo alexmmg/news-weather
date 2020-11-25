@@ -1,29 +1,64 @@
 import React from 'react';
-import {GridList, GridListTile, GridListTileBar, IconButton} from '@material-ui/core';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import {makeStyles} from '@material-ui/core/styles';
 
-const ArticleItem = (props) => {
-  return (
-      <GridList cellHeight={300} spacing={3}>
-            <GridListTile key={props.url} >
-              <img src={props.urlToImage} alt={props.url}/>
-              <GridListTileBar
-                  title={props.title}
-                  titlePosition="top"
-                  actionPosition="left"
-                  // className={classes.titleBar}
-              />
-            </GridListTile>
-        )}
-      </GridList>
+const useStyles = makeStyles({
+    paper: {
+        textAlign: "left",
+        marginBottom: "25px",
+        width: "600px",
+        padding: "15px"
+    },
+    link: {
+        textDecoration: "none",
+        color: "white"
+    },
+    actionButton: {
+        textTransform: "uppercase",
+        width: 152
+    },
+    box: {
+        marginBottom: 30
+    }
+});
 
-      // title={el.title}
-      // author={el.author}
-      // description={el.description}
-      // urlToImage={el.urlToImage}
+const ArticleItem = ({url, title, author, description, urlToImage}) => {
+    const classes = useStyles();
 
-
-  )
+    return (
+        <Grid item xs={12} md={4}>
+            <Paper className={classes.paper}>
+                <div className={classes.box}>
+                    <Typography
+                        style={{marginBottom: "10px"}}
+                        color="secondary"
+                        gutterBottom
+                    >
+                        {title}
+                    </Typography>
+                    <Typography variant="body1" gutterBottom>
+                        {description}
+                    </Typography>
+                </div>
+                <div><img style={{width: "400px"}} src={urlToImage} alt={title}/></div>
+                <Typography variant="body2" color="textSecondary" component="p">
+                    {author}
+                </Typography>
+                <div style={{display: "flex", justifyContent: "flex-end"}}>
+                    <Button
+                        color="primary"
+                        variant="contained"
+                        className={classes.actionButton}
+                    >
+                        <a className={classes.link} target="_blank" href={url}>Learn more</a>
+                    </Button>
+                </div>
+            </Paper>
+        </Grid>
+    )
 };
 
 export default ArticleItem;

@@ -10,7 +10,6 @@ let initialState = {
     },
     name: "",
     searchHistory: []
-
 };
 
 const weatherReducer = (state = initialState, action) => {
@@ -38,15 +37,6 @@ const weatherReducer = (state = initialState, action) => {
                 searchHistory
             };
         }
-        // case DELETE_CITY_WEATHER_DATA: {
-        //     let searchHistory = [...state.searchHistory];
-        //     searchHistory.splice(action.payload.index, 1);
-        //     return {
-        //         ...state,
-        //         searchHistory
-        //     };
-        // }
-
         default:
             return state;
     }

@@ -9,6 +9,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import CityWeather from "./CityWeather";
+import makeStyles from "@material-ui/core/styles/makeStyles";
 
 
 const Weather = (props) => {
@@ -16,11 +17,24 @@ const Weather = (props) => {
     const {location, error} = useLocation();
     const isAuth = useSelector(state => state.auth.isAuth);
     const weatherHistory = useSelector(state => state.weather.searchHistory);
-    // const{humidity = main.humidity, pressure = main.pressure, temp = main.temp, name = name} = weatherHistory;
-
     const [city, setCity] = useState("")
     const [cityOnButtonClick, setCityOnButtonClick] = useState("")
 
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            flexGrow: 1,
+
+        },
+        item: {
+            textAlign: 'center',
+            margin: 20
+        },
+        button: {
+            margin: 9,
+
+        }
+    }));
+    const classes = useStyles();
 
     useEffect(() => {
         let cityWeather = async () => {
@@ -47,28 +61,29 @@ const Weather = (props) => {
         setCity('')
     }
 
-    console.log(weatherHistory);
     return (
-        <Grid container spacing={1}>
-            <Grid container item xs={8} spacing={3}>
+        <Grid container spacing={1} className={classes.root}>
+            <Grid item xs={12} spacing={3} className={classes.item}>
+
                 <form noValidate autoComplete="off">
                     <TextField value={city} onChange={e => setCity(e.target.value)} id="outlined-basic"
                                label="Find city"
                                variant="outlined"/>
-                    <Button type='submit' variant="contained" color="primary" onClick={handleClick}>Search</Button>
+                    <Button className={classes.button} type='submit' variant="contained" color="primary" onClick={handleClick}>Search</Button>
                 </form>
-
+            </Grid>
+            <Grid item xs={6} spacing={3}>
                 <div>
                     {
                         weatherHistory.map((el, index) => (
-                            <CityWeather city={el.name} country={el.sys.country} humidity={el.main.humidity} pressure={el.main.pressure}
-                                         temp={el.main.temp} key={el.id} i={index} />)
+                            <CityWeather city={el.name} country={el.sys.country} humidity={el.main.humidity}
+                                         pressure={el.main.pressure}
+                                         temp={el.main.temp} key={el.id} i={index}/>)
                         )
                     }
                 </div>
-
             </Grid>
-            <Grid container item xs={4} spacing={3}>
+            <Grid item xs={6} spacing={3}>
                 <LocalWeather/>
             </Grid>
         </Grid>
