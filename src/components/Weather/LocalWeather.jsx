@@ -19,7 +19,7 @@ const LocalWeather = () => {
                 const lngt = location.longitude;
                 // console.log(1)
 
-                //Works only with https certificate or add console.log(1) above to test the API
+                //Should be working with https certificate or change the position of the line "const response = ..." in code to see the position in development.
                 const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lngt}&appid=${apikey}&units=metric`)
                 dispatch(setWeatherData(response.data.main, response.data.name))
             } catch (err) {
