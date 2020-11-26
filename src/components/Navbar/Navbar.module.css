@@ -1,13 +1,10 @@
 .backGr {
     background-color: #B6B3B3;
+    height: 8vh;
 }
 
 .item {
     text-decoration: none
-}
-
-.loginBtn {
-    margin-top: 10px;
 }
 
 .center {

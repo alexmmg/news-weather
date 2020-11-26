@@ -63,7 +63,7 @@ const Weather = (props) => {
 
     return (
         <Grid container spacing={1} className={classes.root}>
-            <Grid item xs={12} spacing={3} className={classes.item}>
+            <Grid item xs={12} className={classes.item}>
 
                 <form noValidate autoComplete="off">
                     <TextField value={city} onChange={e => setCity(e.target.value)} id="outlined-basic"
@@ -72,7 +72,7 @@ const Weather = (props) => {
                     <Button className={classes.button} type='submit' variant="contained" color="primary" onClick={handleClick}>Search</Button>
                 </form>
             </Grid>
-            <Grid item xs={6} spacing={3}>
+            <Grid item xs={6}>
                 <div>
                     {
                         weatherHistory.map((el, index) => (
@@ -83,7 +83,7 @@ const Weather = (props) => {
                     }
                 </div>
             </Grid>
-            <Grid item xs={6} spacing={3}>
+            <Grid item xs={6}>
                 <LocalWeather/>
             </Grid>
         </Grid>
