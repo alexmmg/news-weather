@@ -10,16 +10,13 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1959e5af-7f50-4803-b677-6074540d2190" name="Default Changelist" comment="starting Weather">
-      <change afterPath="$PROJECT_DIR$/y/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Weather/LocalWeather.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Weather/LocalWeather.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +143,7 @@
       <workItem from="1606335334910" duration="2587000" />
       <workItem from="1606370583871" duration="2374000" />
       <workItem from="1606383114834" duration="1074000" />
+      <workItem from="1606388531030" duration="332000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605214094970</created>
@@ -224,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606371197167</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="after deploy">
+      <created>1606388652485</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1606388652486</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +265,8 @@
     <MESSAGE value="before deploy" />
     <MESSAGE value="final commit" />
     <MESSAGE value="news API changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="news API changed" />
+    <MESSAGE value="after deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="after deploy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="177" y="55" width="1084" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606050481409">
