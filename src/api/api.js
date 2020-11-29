@@ -1,4 +1,4 @@
-import * as axios from "axios";
+// import * as axios from "axios";
 import {credentials} from "../assets/data/data"
 
 export const authAPI = {

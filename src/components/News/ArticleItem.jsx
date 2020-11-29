@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     paper: {
         textAlign: "left",
         marginBottom: "25px",
-        width: "600px",
+        width: "90%",
         padding: "15px"
     },
     link: {
@@ -29,7 +29,7 @@ const ArticleItem = ({url, title, author, description, urlToImage}) => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} sm={8}>
             <Paper className={classes.paper}>
                 <div className={classes.box}>
                     <Typography
@@ -43,7 +43,7 @@ const ArticleItem = ({url, title, author, description, urlToImage}) => {
                         {description}
                     </Typography>
                 </div>
-                <div><img style={{width: "400px"}} src={urlToImage} alt={title}/></div>
+                <div><img style={{width: "90%"}} src={urlToImage} alt={title}/></div>
                 <Typography variant="body2" color="textSecondary" component="p">
                     {author}
                 </Typography>

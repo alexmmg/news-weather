@@ -69,7 +69,8 @@ const Weather = (props) => {
                     <TextField value={city} onChange={e => setCity(e.target.value)} id="outlined-basic"
                                label="Find city"
                                variant="outlined"/>
-                    <Button className={classes.button} type='submit' variant="contained" color="primary" onClick={handleClick}>Search</Button>
+                    <Button className={classes.button} type='submit' variant="contained" color="primary"
+                            onClick={handleClick}>Search</Button>
                 </form>
             </Grid>
             <Grid item xs={6}>

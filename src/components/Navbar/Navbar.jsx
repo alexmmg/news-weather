@@ -7,7 +7,7 @@ import Grid from "@material-ui/core/Grid";
 
 const Navbar = (props) => {
     return (
-            <Grid container className={s.backGr}>
+            <Grid container sm={12} className={s.backGr}>
                 <Grid item sm={9} className={s.center}>
                     <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
                         <Button>

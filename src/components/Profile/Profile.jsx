@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     paper: {
         textAlign: "left",
         marginBottom: "25px",
-        width: "600px",
+        width: "90%",
         padding: "15px"
     },
     link: {
@@ -37,7 +37,7 @@ const Profile = () => {
     }
 
     return (
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} sm={8}>
             <Paper className={classes.paper}>
                 <div className={classes.box}>
                     <Typography
@@ -52,7 +52,7 @@ const Profile = () => {
                         On an intense and historic one-on-one date, Tayshia Adams and Ivan Hall got topical.
                     </Typography>
                 </div>
-                <div><img style={{width: "400px"}}
+                <div><img style={{width: "90%"}}
                           src="https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1519,w_2700,x_0,y_293/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1606272454/156573_BCT_S16_KA_Tayshia_2700x4000_V3_Sustained_czm0zn"
                           alt="title"/></div>
                 <Typography variant="body2" color="textSecondary" component="p">
