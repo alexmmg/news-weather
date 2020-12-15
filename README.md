@@ -1,3 +1,10 @@
+Demo:
+https://weather-news-e1123.web.app/
+
+login: admin@admin.com
+pass: 12345
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
