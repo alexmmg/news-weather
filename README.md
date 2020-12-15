@@ -1,8 +1,10 @@
-Demo:
+demo:
 https://weather-news-e1123.web.app/
 
 login: admin@admin.com
+
 pass: 12345
+
 
 
 # Getting Started with Create React App
